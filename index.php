@@ -47,30 +47,12 @@
             
             
             <div class="col-lg-3">
-                
-                <aside class="card small">
-                    <h3 class="card-header fs-6">
-                        SideBar
-                    </h3>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><a href="" class="text-decoration-none text-dark">Item 1</a></li>
-                        <li class="list-group-item"><a href="" class="text-decoration-none text-dark">Item 2</a></li>
-                        <li class="list-group-item"><a href="" class="text-decoration-none text-dark">Item 3</a></li>
-                        <li class="list-group-item"><a href="" class="text-decoration-none text-dark">Item 4</a></li>
-                    </ul>
-                </aside>
 
-                <aside class="card small">
-                    <h3 class="card-header fs-6">
-                        SideBar
-                    </h3>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><a href="" class="text-decoration-none text-dark">Item 1</a></li>
-                        <li class="list-group-item"><a href="" class="text-decoration-none text-dark">Item 2</a></li>
-                        <li class="list-group-item"><a href="" class="text-decoration-none text-dark">Item 3</a></li>
-                        <li class="list-group-item"><a href="" class="text-decoration-none text-dark">Item 4</a></li>
-                    </ul>
-                </aside>
+
+                <?php if ( is_active_sidebar( 'default_sidebar' ) ) : ?>
+                        <?php dynamic_sidebar( 'default_sidebar' ); ?>
+                <?php endif; ?>
+
                 
             </div>
 

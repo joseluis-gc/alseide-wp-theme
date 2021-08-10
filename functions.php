@@ -7,7 +7,7 @@ function theme_files(){
     wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css');
 
     wp_enqueue_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js', array('jquery'), true, true);
-    //wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js');
+    wp_enqueue_script('custom-js', get_template_directory_uri() . '/js/custom.js', array('jquery'), true, true);
 }
 add_action('wp_enqueue_scripts', 'theme_files');
 
@@ -18,6 +18,46 @@ add_action('wp_enqueue_scripts', 'theme_files');
 
 //Title tag support
 add_theme_support('title-tag');
+
+
+
+
+
+
+//widgets
+function custom_widgets() {
+
+	register_sidebar( array(
+		'name'          => 'My Default SideBar',
+		'id'            => 'default_sidebar',
+		'before_widget' => '<aside class="card small mb-3 default_sidebar">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="card-header fs-6">',
+		'after_title'   => '</h3>',
+	) );
+
+  
+	register_sidebar( array(
+		'name'          => 'My Footer Widgets',
+		'id'            => 'footer_widgets',
+		'before_widget' => '<div class="col-lg-3"><div class="footer_widget">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '<h4 class="fs-6">',
+		'after_title'   => '</h4>',
+	) );
+
+}
+add_action( 'widgets_init', 'custom_widgets' );
+
+
+
+
+
+
+
+
+
+
 
 
 
