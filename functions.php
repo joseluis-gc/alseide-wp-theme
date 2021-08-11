@@ -46,6 +46,16 @@ function custom_widgets() {
 		'after_title'   => '</h4>',
 	) );
 
+
+  register_sidebar( array(
+		'name'          => 'Front Page Slogan',
+		'id'            => 'front_page_banner_text',
+		'before_widget' => '<div class="banner_text">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h1 class="fs-5">',
+		'after_title'   => '</h1>',
+	) );
+
 }
 add_action( 'widgets_init', 'custom_widgets' );
 

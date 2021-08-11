@@ -10,6 +10,10 @@
         $('.footer_widget> ul').addClass('list-unstyled');
         $('.footer_widget> ul > li > a ').addClass('text-decoration-none text-white');
 
+
+        $('.banner_text> h2').addClass('fs-5');
+        $('.banner_text> h1').addClass('fs-5');
+
     });
 
 })(jQuery);
