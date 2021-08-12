@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="default-holder">
+<section class="default-holder mt-5 mb-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-9">

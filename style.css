@@ -17,6 +17,29 @@ body{
     height: auto;
 }
 
+.main_content img{
+    max-width: 100%;
+    height: auto;
+}
+
+blockquote{
+    padding:15px;
+    background-color:#e3e3e3;
+    border-left: 3px solid black;
+}
+
+pre{
+    padding:15px;
+    background-color:#e3e3e3;
+    border: 4px solid black;
+    border-radius: 3px;
+}
+
+.comment-reply-link, .comment-author, .vcard, .comment-meta, .commentmetadata {
+    text-decoration: none!important;
+}
+
+
 h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: .5rem;
