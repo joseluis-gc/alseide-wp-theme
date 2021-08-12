@@ -5,6 +5,24 @@ Author: Jose Luis Gomez Cecena
 
 body{
     padding-top: 110px;
+    font-family: "Poppins", san-serif !important;
+}
+
+.fs-1{
+    font-weight: 600;
+}
+
+.feature-holder img{
+    width: 55px;
+    height: auto;
+}
+
+h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    font-weight: 700 !important;
 }
 
 .copy{
@@ -20,7 +38,7 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(15, 15, 15, 0.6); 
+    background-color: rgba(0, 0, 0, 0.25); 
     z-index: 2; 
     cursor: pointer; 
 }
@@ -53,12 +71,50 @@ body{
 
 
 .btn-alseide {
+    /*
     border-radius: 0 !important;
     width: 200px !important;
     height: 3rem !important;
     padding:.475rem .75rem !important;
+    */
 }
 
-.btn-alseide:hover, .btn-alseide:focus {
-    
+.btn-alseide {
+    margin: 10px;
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+    /*text-transform: uppercase;*/
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #FFF !important;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 25px;
+}
+.btn-alseide:hover{
+    /*box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: 8px 10px 12px;*/
+}
+.btn-alseide-1 {background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)}
+.btn-alseide-1:hover { background-position: right center; }
+
+.btn-alseide-2 {background-image: linear-gradient(to right, #2BC0E4 0%, #EAECC6 51%, #2BC0E4 100%)}
+.btn-alseide-2:hover { background-position: right center; }
+
+.btn-alseide-3 {background-image: linear-gradient(to right, #7474BF 0%, #348AC7 51%, #7474BF 100%)}
+.btn-alseide-3:hover { background-position: right center; }
+
+.btn-alseide-4 {background-image: linear-gradient(to right, #9dff2c 0%, #0cbb38 51%, #d1ff2c 100%)}
+.btn-alseide-4:hover { background-position: right center; }
+
+
+.card-gradient{
+    background-image: linear-gradient(to right, #15f5bd 0%, #0cbb38 51%, #08b817 100%);
+    color:white;
 }
