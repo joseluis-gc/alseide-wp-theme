@@ -8,6 +8,12 @@ body{
     font-family: "Poppins", san-serif !important;
 }
 
+.navbar-light .navbar-toggler{
+    border-color: transparent !important;
+    color: transparent !important;
+
+}
+
 .fs-1{
     font-weight: 600;
 }
