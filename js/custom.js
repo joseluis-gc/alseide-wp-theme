@@ -19,6 +19,10 @@
         $('.banner_text> h2').addClass('fs-1 shadow-sm ');
         $('.banner_text> h1').addClass('fs-1 shadow-sm ');
 
+        $('.wpcf7-form-control-wrap> input').addClass('form-control bora fullwidth-control');
+        $('.wpcf7-form-control-wrap> textarea').addClass('form-control bora fullwidth-control-textarea');
+
+
     });
 
 })(jQuery);
