@@ -7,7 +7,7 @@ get_header();
 
 ?>
 
-<section style="background: url('<?php echo the_field('intro_image') ?>'); width:100%;height:500px;background-repeat: no-repeat;background-position: center;background-size:center;background-attachment:fixed;" class="bgimage">
+<section style="background: url('<?php echo the_field('intro_image') ?>'); width:100%;height:100vh;background-repeat: no-repeat;background-position: center;background-size:center;background-attachment:fixed;" class="bgimage">
     <div class="overlaybg">
         <div class="container-fluid overlaycontent">
             <div class="row">
@@ -18,9 +18,9 @@ get_header();
 
                        
                         <div class="col-lg-8 offset-lg-2 text-center">
-                            <?php the_field('intro_text'); ?>
+                            <h1 class="fs-1 fs-1x"><?php the_field('intro_text'); ?></h1>
                             <?php 
-                                if(get_field('display_button_op') == 'si'):
+                                if(get_field('display_button_op') == 'yes'):
                             ?>
                             <p><a href="<?php the_field('button_url'); ?>" class="btn-alseide btn-alseide-4 btn"><?php the_field('intro_button_text'); ?></a></p>
                             <?php endif; ?>
@@ -37,6 +37,21 @@ get_header();
     </div>
 </section>
 
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 px-4 py-5 p-lg-3 all-text-white">
+                <div class="h-100">
+                    <div class="title text-center p-0">
+                        <br><br>
+                        <h2><?php echo the_field('front_page_title'); ?></h2>
+                        <p><?php echo the_field('front_page_text'); ?></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
@@ -127,11 +142,11 @@ if(get_field('display_callbox_1_op') == 'yes'):
 
 
 <section class="content-section pb-5" id="portfolio">
-    <div class="container px-4 px-lg-5">
+    <div class="container">
         <div class="content-section-heading text-center">
             <h2 class="mb-5">Proyectos</h2>
         </div>
-        <div class="row gx-0">
+        <div class="row">
 
         <?php 
 

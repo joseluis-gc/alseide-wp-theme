@@ -16,6 +16,13 @@ body{
 
 .fs-1{
     font-weight: 600;
+    text-shadow: 2px 1px 2px black;
+}
+
+
+.fs-1x{
+    font-weight: 600;
+    text-shadow: 2px 1px 2px black;
 }
 
 .feature-holder img{
