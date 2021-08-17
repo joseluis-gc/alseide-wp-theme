@@ -3,24 +3,11 @@ get_header();
 
 /**
  * Template Name: Front Page
- */
+*/
 
 ?>
-<!--
-<header class="main-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="banner-text">
-                    <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit impedit quaerat alias</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae ratione voluptates reprehenderit eos assumenda. Delectus alias corrupti vel fuga enim assumenda quo.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
--->
-<section class="bgimage">
+
+<section style="background: url('<?php echo the_field('intro_image') ?>'); width:100%;height:500px;background-repeat: no-repeat;background-position: center;background-size:center;background-attachment:fixed;" class="bgimage">
     <div class="overlaybg">
         <div class="container-fluid overlaycontent">
             <div class="row">
@@ -31,12 +18,12 @@ get_header();
 
                        
                         <div class="col-lg-8 offset-lg-2 text-center">
-                       
-                            <?php if ( is_active_sidebar( 'front_page_banner_text' ) ) : ?>
-                                    <?php dynamic_sidebar( 'front_page_banner_text' ); ?>
+                            <?php the_field('intro_text'); ?>
+                            <?php 
+                                if(get_field('display_button_op') == 'si'):
+                            ?>
+                            <p><a href="<?php the_field('button_url'); ?>" class="btn-alseide btn-alseide-4 btn"><?php the_field('intro_button_text'); ?></a></p>
                             <?php endif; ?>
-     
-                            <p><a href="#" class="btn-alseide btn-alseide-4 btn">Contacto</a></p>
                         </div>
                         
 
@@ -62,7 +49,7 @@ if($features == 'yes'):
         <div class="row">
             
             <div class="col-lg-3  col-md-6">
-                <div style="  border-top: 4px solid #03991a;" class="card shadow h-100">
+                <div style="  border-top: 4px solid #03991a;" class="card shadow-sm h-100">
                     <img src="<?php the_field('1_servicio_imagen'); ?>" class="card-img-top" alt="<?php the_field('1_servicio_titulo'); ?>">
                     <div class="card-body">
                         <h5 class="card-title"><?php the_field('1_servicio_titulo'); ?></h5>
@@ -73,7 +60,7 @@ if($features == 'yes'):
 
             
             <div class="col-lg-3  col-md-6">
-                <div style="  border-top: 4px solid #03991a;" class="card shadow h-100">
+                <div style="  border-top: 4px solid #03991a;" class="card shadow-sm h-100">
                     <img src="<?php the_field('2_servicio_imagen'); ?>" class="card-img-top" alt="<?php the_field('2_servicio_titulo'); ?>">
                     <div class="card-body">
                         <h5 class="card-title"><?php the_field('2_servicio_titulo'); ?></h5>
@@ -84,7 +71,7 @@ if($features == 'yes'):
 
             
             <div class="col-lg-3  col-md-6">
-                <div style="  border-top: 4px solid #03991a;" class="card shadow h-100">
+                <div style="  border-top: 4px solid #03991a;" class="card shadow-sm h-100">
                     <img src="<?php the_field('3_servicio_imagen'); ?>" class="card-img-top" alt="<?php the_field('3_servicio_titulo'); ?>">
                     <div class="card-body">
                         <h5 class="card-title"><?php the_field('3_servicio_titulo'); ?></h5>
@@ -95,7 +82,7 @@ if($features == 'yes'):
 
             
             <div class="col-lg-3  col-md-6">
-                <div style="  border-top: 4px solid #03991a;" class="card shadow h-100">
+                <div style="  border-top: 4px solid #03991a;" class="card shadow-sm h-100">
                     <img src="<?php the_field('4_servicio_imagen'); ?>" class="card-img-top" alt="<?php the_field('4_servicio_titulo'); ?>">
                     <div class="card-body">
                         <h5 class="card-title"><?php the_field('4_servicio_titulo'); ?></h5>
@@ -110,21 +97,23 @@ if($features == 'yes'):
 <?php endif; ?>
 
 
-
+<?php 
+if(get_field('display_callbox_1_op') == 'yes'):
+?>
 <section class="why-us p-0 pt-5 pb-5">
 		<div class="container">
 			<div class="row no-gutters shadow">
 				<!--why us left-->
-				<div class="col-lg-6 d-none d-lg-block bg-light" style="background:url(<?php echo get_template_directory_uri(  ) ?>/images/backgroundoption1.jpg) no-repeat; background-size:cover;">
+				<div class="col-lg-6 d-none d-lg-block bg-light" style="background:url(<?php the_field('call_box_image'); ?>) no-repeat; background-size:cover;">
 				</div>
 				<!--why us right-->
 				<div class="col-lg-6 col-md-12 card-gradient px-4 py-5 p-lg-5 all-text-white">
 					<div class="h-100">
 						<div class="title text-left p-0">
                             <br><br>
-							<span class="pre-title">Why you should trust us?</span>
-							<h2>We Provide the best solutions for your business needs!</h2>
-							<p>Amounted old strictly but Marianne admitted. People former is remove remain as. Admiration instrument affronting invitation reasonably up do of prosperous in shy saw declared age debating ecstatic man call in so want pure rank am dear were remarkably to continuing on. </p>
+							<span class="pre-title"><?php the_field('call_box_small_text') ?></span>
+							<h2><?php the_field('call_box_title') ?></h2>
+							<p><?php the_field('call_box_text') ?></p>
 						</div>
 						<div class="row pt-5">
 							
@@ -134,6 +123,58 @@ if($features == 'yes'):
 			</div>
 		</div>
 </section>
+<?php endif; ?>
+
+
+<section class="content-section pb-5" id="portfolio">
+    <div class="container px-4 px-lg-5">
+        <div class="content-section-heading text-center">
+            <h2 class="mb-5">Proyectos</h2>
+        </div>
+        <div class="row gx-0">
+
+        <?php 
+
+            global $wp_query;
+            $args = array(
+                'post_type' => 'portfolio',
+                'order_by'=>'date',
+                'order'=>'DESC',
+                'posts_per_page'=>6
+                //'cat' => 'featured',
+
+            );
+            $temp_query = $wp_query;
+            $wp_query = NULL;
+            $wp_query = new WP_Query( $args );
+            if ( have_posts() ) : while ( have_posts() ) : the_post(); 
+        ?>
+
+            <div class="col-lg-4">
+                <a class="portfolio-item" href="<?php the_permalink(); ?>">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <div class="h2"><?php echo get_the_title(); ?></div>
+                            <small><?php echo get_the_excerpt() ?></small>
+                        </div>
+                    </div>
+
+
+                    <?php if(has_post_thumbnail()):?>
+                            <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="img-fluid " alt="<?php echo get_the_title(); ?>">
+                        <?php else: ?>
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="img-fluid " alt="<?php echo get_the_title(); ?>">
+                    <?php endif; ?>
+                </a>
+            </div>
+        
+        <?php endwhile; else : ?>
+            <p><?php esc_html_e( 'No hay trabajos recientes.' ); ?></p>
+        <?php endif; ?>
+        </div>
+    </div>
+</section>
+
 
 <?php
 get_footer(); 

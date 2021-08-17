@@ -1,10 +1,24 @@
 <?php get_header(); ?>
 
+
+<header class="cat-header pb-3 pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="cat-header-text">
+                    <h1><?php echo single_cat_title(); ?></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
 <section class="default-holder mt-5 mb-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
                 <div class="list-group">
+
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
                     <a href="<?php the_permalink() ?>" class="list-group-item list-group-item-action">
