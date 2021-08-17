@@ -262,3 +262,53 @@ h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     }
   }
   
+
+
+
+
+
+  .overlaybg404 {
+    /*position: fixed;*/ 
+    /*display: none;*/ 
+    width: 100%;
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.25); 
+    z-index: 2; 
+    cursor: pointer; 
+}
+
+.overlaycontent404{
+    position: absolute;
+    /*top: 50%;*/
+    margin-top: 220px;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    text-shadow: black 5 5;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+.overlaycontent404 h1{
+    font-size: 48px;
+}
+
+
+.overlaycontent404 p{
+    font-size: 18px;
+}
+
+
+.bgimage404 {
+    width:100%;
+    height: 100vh;
+    background: url('images/404.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;  
+}
