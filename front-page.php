@@ -11,27 +11,16 @@ get_header();
     <div class="overlaybg">
         <div class="container-fluid overlaycontent">
             <div class="row">
-                
                 <div class="col-md-10 offset-md-1">
-
                     <div class="row">
-
-                       
-                        <div class="col-lg-8 offset-lg-2 text-center">
+                        <div style="margin-top: 40vh;" class="col-lg-8 offset-lg-2 text-center">
                             <h1 class="fs-1 fs-1x"><?php the_field('intro_text'); ?></h1>
-                            <?php 
-                                if(get_field('display_button_op') == 'yes'):
-                            ?>
+                            <?php if(get_field('display_button_op') == 'yes'): ?>
                             <p><a href="<?php the_field('button_url'); ?>" class="btn-alseide btn-alseide-4 btn"><?php the_field('intro_button_text'); ?></a></p>
                             <?php endif; ?>
                         </div>
-                        
-
                     </div>
-                    
-
                 </div>
-                
             </div>
         </div>
     </div>

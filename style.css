@@ -14,6 +14,14 @@ body{
 
 }
 
+.navbar-light .navbar-nav .nav-link{
+    font-weight: bold !important;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link{
+    color:rgb(59, 138, 69) !important;
+}
+
 .fs-1{
     font-weight: 600;
     text-shadow: 2px 1px 2px black;
@@ -21,6 +29,7 @@ body{
 
 
 .fs-1x{
+
     font-weight: 600;
     text-shadow: 2px 1px 2px black;
 }
