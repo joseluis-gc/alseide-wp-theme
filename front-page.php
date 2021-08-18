@@ -4,10 +4,11 @@ get_header();
 /**
  * Template Name: Front Page
 */
-
 ?>
-
-<section style="background: url('<?php echo the_field('intro_image') ?>'); width:100%;height:100vh;background-repeat: no-repeat;background-position: center;background-size:center;background-attachment:fixed;" class="bgimage">
+<!--
+    style="background: url('<?php echo the_field('intro_image') ?>'); width:100%;height:100vh;background-repeat: no-repeat;background-position: center;background-size:center;background-attachment:fixed;"
+-->
+<section class="bgimage">
     <div class="overlaybg">
         <div class="container-fluid overlaycontent">
             <div class="row">

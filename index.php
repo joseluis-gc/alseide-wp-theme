@@ -37,7 +37,9 @@
                     </a>
 
                     <?php endwhile; else : ?>
-                        <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+                        <p>
+                            <?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?>
+                        </p>
                     <?php endif; ?>
 
                 </div>

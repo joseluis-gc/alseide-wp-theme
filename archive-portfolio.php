@@ -1,10 +1,15 @@
 <?php get_header(); ?>
-<header class="cat-header pb-3 pt-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="cat-header-text">
-                    <h1>Portafolio</h1>
+
+<header class="portfolio-header mb-5">
+    <div class="">
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <div class="row">
+                        <div style="margin-top: 10vh;" class="col-lg-12 text-left">
+                            <h1 class="fs-1 fs-1x">Portafolio</h1>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

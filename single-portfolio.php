@@ -8,10 +8,31 @@ get_header();
 
 <?php if( have_posts() ) : while( have_posts() ) : the_post(  ) ?>
 
+
+
+<section style="background: url('<?php echo get_the_post_thumbnail_url() ?>'); width:100%;height:50vh;background-repeat: no-repeat;background-position: center;background-size:center;background-attachment:fixed;">
+    <div class="overlaybg-half">
+        <div class="container-fluid overlaycontent-half">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <div class="row">
+                        <div style="margin-top: 40vh;" class="col-lg-8 offset-lg-2 text-center">
+                            <h1 class="fs-1 fs-1x"><?php the_title(); ?></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
 <header class="custom_page_header">
     <div class="container">
         <div class="row align-items-center">
-        
+            
             <div class="col-lg-6 col-md-6">
                 <div class="page-title-heading small">
                     <h1><?php echo get_the_title(); ?></h1>
@@ -46,22 +67,13 @@ get_header();
     <div class="container">
         <div class="row">
             
-            <div class="col-lg-9 col-md-9">
+            <div class="col-lg-12 col-md-12">
                 <article class="main_content">
                     <?php the_content() ?>
                 </article>
                 <p class="postmetadata"><?php _e( 'Posted in' ); ?> <?php the_category( ', ' ); ?></p>
                 <?php //comments_template() ?>
             </div>
-
-
-            <div class="col-lg-3 col-md-3">
-                <?php if ( is_active_sidebar( 'default_sidebar' ) ) : ?>
-                        <?php dynamic_sidebar( 'default_sidebar' ); ?>
-                <?php endif; ?>
-            </div>
-
-
         </div>
     </div>
 </section>
